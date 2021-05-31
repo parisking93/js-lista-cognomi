@@ -34,7 +34,8 @@ var listaCognomi = ['Neri','Verdi','Gialli','Bianchi','Rossi'];
 
 // chiedo all'utente un cognome 
 var cognome = prompt('dammi il tuo cognome');
-
+// traformo la prima lettera dell'input in uppercase
+cognome = cognome.charAt(0).toUpperCase() + cognome.slice(1);
 // inserisco il cognome nella lista 
 listaCognomi.push(cognome);
 
