@@ -39,7 +39,6 @@ while (continua == true) {
 
 
 // stampo un messaggio appropriato  sull'esito del controllo 
-document.getElementById('controllo').innerHTML = check;
 
 
 
@@ -73,7 +72,7 @@ for(i = 0; i < listaCognomi.length; i++){
         pos = i + 1
     }
 }
-
+document.getElementById('controllo').innerHTML = check;
 document.getElementById('posizione').innerHTML = 'ti trovi nella posizione ' + pos + ' della lista';
 
 
