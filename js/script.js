@@ -7,6 +7,7 @@
 var listaEmail = ['astrubale@icloud.com', 'gino@gmail.com', 'franc@gmail.com'];
 var check = 'hai sbagliato email riprova';
 var continua = true;
+
 // chiedo all'utente la sua email 
 var email = prompt('dammi la tua email');
 
@@ -18,8 +19,16 @@ while (continua == true) {
             continua = false;
         } 
     }
+    if (continua == true) {
+        var riprova = prompt('La tua email non è corretta......vuoi riprovare ??  ((si per riprovare))');
 
-    var email = prompt('dammi la tua email');
+        if (riprova == 'si') {
+            var email = prompt('dammi la tua email');
+        } else {
+            continua = false
+        }
+    }
+    
 }
 
 
