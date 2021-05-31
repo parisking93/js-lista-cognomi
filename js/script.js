@@ -26,8 +26,7 @@ while (continua == true) {
             email = prompt('ridammi la tua email');
         } else if(riprova == 'r'){
             listaEmail.push(email);
-            check = 'Benvenuto ' + email;
-            continua = false;
+            email = prompt('Registrazione andata a buon fine! Inserisci la  tue email')
         }
         else {
             continua = false
