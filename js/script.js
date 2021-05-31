@@ -41,5 +41,18 @@ listaCognomi.push(cognome);
 //ordino alfabeticamente la lista
 listaCognomi = listaCognomi.sort();
 
+// stampo la lista 
+var pos
+
+for(i = 0; i < listaCognomi.length; i++){
+    document.getElementById('surname').innerHTML += listaCognomi[i] + '<br>';
+
+    if (listaCognomi[i] == cognome){
+        pos = i + 1
+    }
+}
+
+document.getElementById('posizione').innerHTML = 'ti trovi nella posizione ' + pos + ' della lista';
+
 
 
