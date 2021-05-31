@@ -7,6 +7,8 @@
 var listaEmail = ['astrubale@icloud.com', 'gino@gmail.com', 'franc@gmail.com'];
 var check = 'hai sbagliato email riprova';
 var continua = true;
+var ingressi = false;
+
 
 // chiedo all'utente la sua email 
 var email = prompt('dammi la tua email');
@@ -14,10 +16,13 @@ var email = prompt('dammi la tua email');
 while (continua == true) {
     // controllo che l'email sia nella lista 
     for (i = 0; i < listaEmail.length; i++){
-        if (listaEmail[i] == email) {
+        if (listaEmail[i] == email && ingressi == false) {
             check = 'Bentornato ' + email;
             continua = false;
-        } 
+        } else if (listaEmail[i] == email && ingressi == true){ 
+            check = 'Benvenuto ' + email;
+            continua = false;
+        }
     }
     if (continua == true) {
         var riprova = prompt('La tua email non è corretta......vuoi riprovare ??  ((si per riprovare)) o vuoi registrarti??? ((r per registarsi))');
@@ -27,6 +32,7 @@ while (continua == true) {
         } else if(riprova == 'r'){
             listaEmail.push(email);
             email = prompt('Registrazione andata a buon fine! Inserisci la  tue email')
+            ingressi = true;
         }
         else {
             continua = false
