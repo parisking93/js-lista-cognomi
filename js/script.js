@@ -30,9 +30,21 @@ while (continua == true) {
         if (riprova == 'si') {
             email = prompt('ridammi la tua email');
         } else if(riprova == 'r'){
-            listaEmail.push(email);
-            email = prompt('Registrazione andata a buon fine! Inserisci la  tue email')
-            ingressi = true;
+            var chiocciola = false;
+            for(i = 0; i < email.length; i++) {
+                if (email[i] == '@'){
+                    chiocciola = true;
+                }
+            }
+            if (chiocciola == true){
+                listaEmail.push(email);
+                email = prompt('Registrazione andata a buon fine! Inserisci la  tue email');
+                ingressi = true;
+            } else {
+                alert("Attenzione! l'email ha biosgno della chiocciola '@'");
+                email = prompt('ridammi la tua email');
+            }
+            
         }
         else {
             continua = false
