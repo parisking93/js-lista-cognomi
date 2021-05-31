@@ -20,13 +20,18 @@ while (continua == true) {
         } 
     }
     if (continua == true) {
-        var riprova = prompt('La tua email non è corretta......vuoi riprovare ??  ((si per riprovare))');
+        var riprova = prompt('La tua email non è corretta......vuoi riprovare ??  ((si per riprovare)) o vuoi registrarti??? ((r per registarsi))');
 
         if (riprova == 'si') {
-            var email = prompt('dammi la tua email');
-        } else {
-            continua = false
+            email = prompt('ridammi la tua email');
+        } else if(riprova == 'r'){
+            listaEmail.push(email);
+            check = 'Benvenuto ' + email;
+            continua = false;
         }
+        else {
+            continua = false
+        } 
     }
     
 }
